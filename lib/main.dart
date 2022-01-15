@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:youtube_clone_app/binding/init_binding.dart';
 import 'package:youtube_clone_app/src/app.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: '/',
+      initialBinding: InitBinding(),
       getPages: [
         GetPage(name: '/', page: () => const App()),
       ],
