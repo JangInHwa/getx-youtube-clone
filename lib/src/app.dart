@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:youtube_clone_app/controller/app.dart';
+import 'package:youtube_clone_app/src/controller/app.dart';
+import 'package:youtube_clone_app/src/pages/explore.dart';
+import 'package:youtube_clone_app/src/pages/home.dart';
+import 'package:youtube_clone_app/src/pages/library.dart';
+import 'package:youtube_clone_app/src/pages/subscribe.dart';
 
 class App extends GetView<AppController> {
   const App({Key? key}) : super(key: key);
@@ -9,8 +13,20 @@ class App extends GetView<AppController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('AppPage')),
-      body: Container(),
+      body: Obx(
+        () {
+          if (controller.currentIndex == 0) {
+            return const HomePage();
+          } else if (controller.currentIndex == 1) {
+            return const ExplorePage();
+          } else if (controller.currentIndex == 3) {
+            return const SubscribePage();
+          } else if (controller.currentIndex == 4) {
+            return const LibraryPage();
+          }
+          return Container();
+        },
+      ),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
