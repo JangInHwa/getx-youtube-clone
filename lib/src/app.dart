@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:youtube_clone_app/src/controller/app.dart';
+import 'package:youtube_clone_app/src/controller/app_controller.dart';
 import 'package:youtube_clone_app/src/pages/explore.dart';
 import 'package:youtube_clone_app/src/pages/home.dart';
 import 'package:youtube_clone_app/src/pages/library.dart';
