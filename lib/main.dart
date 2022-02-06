@@ -20,9 +20,8 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: '/',
-      initialBinding: InitBinding(),
       getPages: [
-        GetPage(name: '/', page: () => const App()),
+        GetPage(name: '/', page: () => const App(), binding: InitBinding()),
       ],
     );
   }
